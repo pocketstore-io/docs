@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 main a {
     text-decoration: none !important;
-    color: #1f6fed !important;
+    color: #1f6fed;
+}
+
+header nav a {
+    text-decoration: none !important;
+    color: #1f6fed;
 }
 
 main a:hover {
     text-decoration: underline !important;
+}
+
+main .prose pre code {
+    color: black;
 }

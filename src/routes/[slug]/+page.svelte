@@ -22,25 +22,20 @@
   });
 </script>
 
-<section class="page mx-auto max-w-6xl prose px-3 py-3 my-3">
-  <section class="grid grid-cols-7 gap-3">
+<section class="page mx-auto max-w-6xl px-3 py-3 my-3">
+  <section class="grid grid-cols-7 gap-6">
     {#if sidebar}
       <div class="col-span-7 md:col-span-2">
-        <SvelteMarkdown source={sidebar} />
+        <div class="divider divider-primary mt-6 mb-3 text-white">Sidebar</div>
+        <div class="prose !max-w-full">
+          <SvelteMarkdown source={sidebar} />
+        </div>
       </div>
     {/if}
     <div class="col-span-7 md:col-span-5">
-      <SvelteMarkdown source={md} />
+      <div class="prose !max-w-full">
+        <SvelteMarkdown source={md} />
+      </div>
     </div>
   </section>
 </section>
-
-<style>
-  a {
-    text-decoration: none; /* Removes the underline */
-  }
-
-  a:hover {
-    text-decoration: underline; /* Optionally, add underline on hover */
-  }
-</style>

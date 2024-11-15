@@ -5,10 +5,19 @@
 <header class="bg-white px-3 py-3">
     <section class="flex justify-between mx-auto max-w-6xl">
         <div class="logo flex items-center">
-            <a href="/" class="text-black font-bold ">PocketStore.io - Docs</a>
+            <img src="/pocketstore-logo.svg" class="h-12" alt="" />
         </div>
         <nav class="md:block hidden">
-            <input type="text" placeholder="Hallo Welt" class="input input-neutral input-sm placeholder-white" />
+            <input
+                type="text"
+                placeholder="Hallo Welt"
+                class="input input-neutral input-sm placeholder-white"
+            />
+            <ul class="flex justify-end">
+                <li>
+                    <a href="/"> Hallo Welt</a>
+                </li>
+            </ul>
         </nav>
         <nav class="md:hidden block">Hallo Welt</nav>
     </section>
