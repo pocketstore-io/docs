@@ -1,0 +1,24 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH and Run Commands
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: docs.pocketstore.io
+          username: root 
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /var/www/docs
+            bun install
+            bun run build
+            pm2 restart ecosystem.config.cjs
