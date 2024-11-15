@@ -150,7 +150,7 @@
 
                         <span class="flex-1">
                             <span class="text-black"> composer require </span>
-                            <span class="text-yellow-600"> laravel/dusk </span>
+                            <span class="text-yellow-600"> jonathan-martz/pocketbase-php-sdk </span>
                         </span>
                     </span>
                 </code>
@@ -159,7 +159,7 @@
                 <p class="text-sm mt-6">
                     Contirbutor with Images <br />
                     Image from current Screenshot daily by Action ? <br />
-                    Requiements: Bun, Composer, PHP and PM2
+                    Requirements: Bun, Composer, Robo, PHP and PM2 <br>
                 </p>
                 <br /><br />
                 <p class="text-sm">
