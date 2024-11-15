@@ -15,7 +15,8 @@
             />
             <ul class="flex justify-end">
                 <li>
-                    <a href="/"> Hallo Welt</a>
+                    <a href="/getting-started"> Getting Started</a>
+                    <a href="/requirements"> Requirements</a>
                 </li>
             </ul>
         </nav>
