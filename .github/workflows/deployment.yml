@@ -21,4 +21,4 @@ jobs:
             cd /var/www/docs
             bun install
             bun run build
-            pm2 restart ecosystem.config.cjs
+            bun x pm2 restart ecosystem.config.cjs
