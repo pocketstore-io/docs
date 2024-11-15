@@ -19,6 +19,7 @@ jobs:
           port: 22
           script: |
             cd /var/www/docs
+            git pull
             bun install
             bun run build
             bun x pm2 restart ecosystem.config.cjs
