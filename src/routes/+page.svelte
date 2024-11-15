@@ -20,9 +20,9 @@
             <div class="col-span-6 md:col-span-3 text-center py-24 px-6">
                 <img src="/pocketstore-logo-white.svg" alt="" />
                 <p class="mb-5 mt-5 text-white">
-                    Welcome to your Documentatio of PocketStore.
+                    Welcome to your Documentation of PocketStore.
                     <br />
-                    Your Store out of your your Pocket
+                    Your Store out of your Pocket
                 </p>
                 <section class="action join">
                     <button
