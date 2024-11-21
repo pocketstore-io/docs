@@ -1,13 +1,16 @@
 <script lang="ts">
+    import Releases from "./../lib/components/Releases.svelte";
+    import Contributor from "./../lib/components/Contributor.svelte";
     import Fa from "svelte-fa";
     import {
-        faCheck,
-        faCheckCircle,
         faCheckSquare,
         faChevronRight,
         faEye,
     } from "@fortawesome/free-solid-svg-icons";
     import { faGithub } from "@fortawesome/free-brands-svg-icons";
+    import History from "../lib/components/History.svelte";
+    import Commits from "../lib/components/Commits.svelte";
+    import Repos from "../lib/components/Repos.svelte";
 
     let copyToClipboard = (command) => {
         navigator.clipboard.writeText(command);
@@ -68,110 +71,75 @@
                 </section>
             </div>
             <div class="col-span-6 md:col-span-3">
-                <div class="col-span-6 md:col-span-3">
-                    <div class="w-full py-24">
-                        <div class="flex justify-between items-center">
-                            <div
-                                class="gopher w-16 h-16 ml-6"
-                                title="Gopher by @github:marcusolsson/gophers"
-                            ></div>
-                            <div class="version text-white">
-                                PocketStore Version: 0.0.1
-                            </div>
-                            <div class="version text-white">Status: alpha</div>
-                        </div>
+                <div class="w-full pt-24 pb-6">
+                    <div class="flex justify-between items-center">
                         <div
-                            class="coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased
+                            class="gopher w-16 h-16 ml-6"
+                            title="Gopher by @github:marcusolsson/gophers"
+                        ></div>
+                        <div class="version text-white">
+                            PocketStore Version: 0.0.1
+                        </div>
+                        <div class="version text-white">Status: alpha</div>
+                    </div>
+                    <div
+                        class="coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased
                                     bg-[#b8dbe4] pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
-                        >
-                            <div class="top mb-2 flex">
-                                <div
-                                    class="h-3 w-3 bg-red-500 rounded-full"
-                                ></div>
-                                <div
-                                    class="ml-2 h-3 w-3 bg-orange-300 rounded-full"
-                                ></div>
-                                <div
-                                    class="ml-2 h-3 w-3 bg-green-500 rounded-full"
-                                ></div>
-                            </div>
-                            <div class="mt-3 flex">
-                                <span class="text-black mr-3">bash:~$</span>
-                                <button
-                                    class="text-[#1f6fed]"
-                                    onclick={() => {
-                                        copyToClipboard(
-                                            "git clone https://github.com/pocketstore-io/demo.git",
-                                        );
-                                    }}
-                                    >git clone
-                                    https://github.com/pocketstore-io/demo.git</button
-                                >
-                            </div>
-                            <div class="mt-3 flex">
-                                <span class="text-black mr-3">bash:~$</span>
-                                <button
-                                    class="text-[#1f6fed]"
-                                    onclick={() => {
-                                        copyToClipboard(
-                                            "cd demo && chmod u+x ./bin/init.sh",
-                                        );
-                                    }}
-                                    >cd demo && chmod u+x ./bin/init.sh</button
-                                >
-                            </div>
-                            <div class="mt-3 flex">
-                                <span class="text-black mr-3">bash:~$</span>
-                                <button
-                                    class="text-[#1f6fed]"
-                                    onclick={() => {
-                                        copyToClipboard("./bin/init.sh");
-                                    }}>./bin/init.sh</button
-                                >
-                            </div>
+                    >
+                        <div class="top mb-2 flex">
+                            <div class="h-3 w-3 bg-red-500 rounded-full"></div>
+                            <div
+                                class="ml-2 h-3 w-3 bg-orange-300 rounded-full"
+                            ></div>
+                            <div
+                                class="ml-2 h-3 w-3 bg-green-500 rounded-full"
+                            ></div>
+                        </div>
+                        <div class="mt-3 flex">
+                            <span class="text-black mr-3">bash:~$</span>
+                            <button
+                                class="text-[#1f6fed]"
+                                onclick={() => {
+                                    copyToClipboard(
+                                        "git clone https://github.com/pocketstore-io/demo.git",
+                                    );
+                                }}
+                                >git clone
+                                https://github.com/pocketstore-io/demo.git</button
+                            >
+                        </div>
+                        <div class="mt-3 flex">
+                            <span class="text-black mr-3">bash:~$</span>
+                            <button
+                                class="text-[#1f6fed]"
+                                onclick={() => {
+                                    copyToClipboard(
+                                        "cd demo && chmod u+x ./bin/init.sh",
+                                    );
+                                }}>cd demo && chmod u+x ./bin/init.sh</button
+                            >
+                        </div>
+                        <div class="mt-3 flex">
+                            <span class="text-black mr-3">bash:~$</span>
+                            <button
+                                class="text-[#1f6fed]"
+                                onclick={() => {
+                                    copyToClipboard("./bin/init.sh");
+                                }}>./bin/init.sh</button
+                            >
                         </div>
                     </div>
                 </div>
+                <Contributor></Contributor>
             </div>
             <div class="col-span-6 md:col-span-3">
-                <div class="divider divider-primary text-white">Hallo Welt</div>
-                <p class="text-sm mt-6 text-white px-3 py-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Obcaecati harum perspiciatis nesciunt. Nobis, et architecto
-                    exercitationem fuga porro ut vel, aliquam explicabo
-                    doloribus minima inventore facilis possimus id. Cumque,
-                    architecto!
-                </p>
-                <code
-                    class="text-sm sm:text-base flex text-left items-center space-x-4 bg-neutral text-white rounded-lg p-4 pl-6"
-                >
-                    <span class="flex gap-4">
-                        <span class="shrink-0 text-white"> $ </span>
-
-                        <span class="flex-1">
-                            <span class="text-black"> composer require </span>
-                            <span class="text-yellow-600"> jonathan-martz/pocketbase-php-sdk </span>
-                        </span>
-                    </span>
-                </code>
+                <History></History>
+                <Repos></Repos>
             </div>
             <div class="col-span-6 md:col-span-3 text-[#b8dbe4]">
-                <p class="text-sm mt-6">
-                    Contirbutor with Images <br />
-                    Image from current Screenshot daily by Action ? <br />
-                    Requirements: Bun, Composer, Robo, PHP and PM2 <br>
-                </p>
-                <br /><br />
-                <p class="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Obcaecati harum perspiciatis nesciunt. Nobis, et architecto
-                    exercitationem fuga porro ut vel, aliquam explicabo
-                    doloribus minima inventore facilis possimus id. Cumque,
-                    architecto!
-                </p>
-                <br /><br />
-                <img src="https://picsum.photos/650/354?random=1" alt="" />
-                <br />
+                <p class="text-sm"></p>
+                <Releases></Releases>
+                <Commits></Commits>
             </div>
         </div>
     </div>

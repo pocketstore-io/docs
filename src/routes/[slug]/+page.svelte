@@ -3,10 +3,15 @@
   import { page } from "$app/stores";
   import { onMount } from "svelte";
 
+  $: $page,
+    () => {
+      load();
+    };
+
   let md = "";
   let sidebar = "";
 
-  onMount(async () => {
+  let load = async function () {
     const res = await fetch(`/sidebar/` + $page.params.slug + `.md`);
     if (res.status === 200) {
       sidebar = await res.text();
@@ -19,6 +24,10 @@
       const response = await fetch(`/error/404.md`);
       md = await response.text();
     }
+  };
+
+  onMount(async () => {
+    load();
   });
 </script>
 
