@@ -1,12 +1,11 @@
 <script>
   import SvelteMarkdown from "svelte-markdown";
   import { page } from "$app/stores";
-  import { onMount } from "svelte";
+  import { afterUpdate, onMount } from "svelte";
 
-  $: $page,
-    () => {
-      load();
-    };
+  afterUpdate(() => {
+    load();
+  });
 
   let md = "";
   let sidebar = "";
