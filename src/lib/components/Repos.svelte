@@ -27,7 +27,7 @@
         <div class="collapse-content">
             <p>hello</p>
             <a
-                href="https://api.github.com/repos/pocketstore-io/storefront"
+                href="https://api.github.com/repos/pocketstore-io/docs"
                 class="text-blue-600">Github Repository</a
             >
         </div>
@@ -40,7 +40,7 @@
         <div class="collapse-content">
             <p>hello</p>
             <a
-                href="https://api.github.com/repos/pocketstore-io/storefront"
+                href="https://api.github.com/repos/pocketstore-io/pb_data"
                 class="text-blue-600">Github Repository</a
             >
         </div>
@@ -53,7 +53,7 @@
         <div class="collapse-content">
             <p>hello</p>
             <a
-                href="https://api.github.com/repos/pocketstore-io/storefront"
+                href="https://api.github.com/repos/pocketstore-io/pb_hooks"
                 class="text-blue-600">Github Repository</a
             >
         </div>
@@ -66,7 +66,7 @@
         <div class="collapse-content">
             <p>hello</p>
             <a
-                href="https://api.github.com/repos/pocketstore-io/storefront"
+                href="https://api.github.com/repos/pocketstore-io/pb_migrations"
                 class="text-blue-600">Github Repository</a
             >
         </div>

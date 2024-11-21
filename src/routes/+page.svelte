@@ -12,6 +12,7 @@
     import Commits from "../lib/components/Commits.svelte";
     import Repos from "../lib/components/Repos.svelte";
     import Status from "$lib/components/Status.svelte";
+    import PocketbasePhpSdk from "$lib/components/pocketbase-php-sdk.svelte";
 
     let copyToClipboard = (command) => {
         navigator.clipboard.writeText(command);
@@ -127,6 +128,7 @@
             <div class="col-span-6 md:col-span-3">
                 <History></History>
                 <Repos></Repos>
+                <PocketbasePhpSdk />
             </div>
             <div class="col-span-6 md:col-span-3 text-[#b8dbe4]">
                 <p class="text-sm"></p>

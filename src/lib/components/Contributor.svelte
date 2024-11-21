@@ -1,9 +1,10 @@
 <script>
-    import { writable } from "svelte/store";
+    import { get, writable } from "svelte/store";
     import { onMount } from "svelte";
 
     // Store to hold contributors
     export let contributors = writable([]);
+    export let counter = writable([]);
 
     // GitHub API fetch function
     async function fetchContributors(owner, repo, token) {
@@ -29,6 +30,8 @@
                     avatar_url:
                         "https://avatars.githubusercontent.com/u/14957082?s=200&v=4",
                 });
+                localStorage.setItem("contributors", data.length);
+                counter.set(data.length);
                 data = data.filter((contributor) =>
                     [
                         "dependabot[bot]",
@@ -37,10 +40,7 @@
                     ].includes(contributor.login),
                 );
                 contributors.set(data); // Update the store
-                localStorage.setItem(
-                    "contributors",
-                    JSON.stringify(data),
-                );
+                localStorage.setItem("contributors", JSON.stringify(data));
                 localStorage.setItem(
                     "contributors-date",
                     new Date().toLocaleDateString(),
@@ -49,8 +49,14 @@
                 console.error("Failed to fetch contributors:", error);
             }
         } else {
-            contributors.set(JSON.parse(localStorage.getItem("contributors") ?? ''));
+            contributors.set(
+                JSON.parse(localStorage.getItem("contributors") ?? ""),
+            );
+
+            counter.set(JSON.parse(localStorage.getItem("contributors") ?? ""));
         }
+
+        console.log("count of contributors: " + get(counter).length);
     }
 
     // Fetch on component mount
