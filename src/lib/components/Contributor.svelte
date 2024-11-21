@@ -25,7 +25,7 @@
                     "https://avatars.githubusercontent.com/u/14957082?s=200&v=4",
             });
             data = data.filter((contributor) =>
-                ["pocketstore-io", "dependabot[bot]", "openai-chatgpt","jonathan-martz"].includes(
+                ["dependabot[bot]", "openai-chatgpt","jonathan-martz"].includes(
                     contributor.login,
                 ),
             );
