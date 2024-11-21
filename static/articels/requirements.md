@@ -1,4 +1,4 @@
-![Placeholder Image](https://placehold.co/1000x261/EEE/31343C)
+![Placeholder Image](https://placehold.co/1000x261/EEE/31343C?text=PocketStore.io+-+Docs)
 
 **Requirements:** (Iam using Ubuntu 24.04)
 
