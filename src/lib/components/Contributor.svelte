@@ -10,28 +10,46 @@
         const url = `https://api.github.com/repos/${owner}/${repo}/contributors`;
         const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
-        try {
-            const response = await fetch(url, { headers });
-            if (!response.ok) {
-                throw new Error(
-                    `Error: ${response.status} ${response.statusText}`,
-                );
-            }
+        if (
+            localStorage.getItem("contributors") === null &&
+            localStorage.getItem("contributors-date") !==
+                new Date().toLocaleDateString()
+        ) {
+            try {
+                const response = await fetch(url, { headers });
+                if (!response.ok) {
+                    throw new Error(
+                        `Error: ${response.status} ${response.statusText}`,
+                    );
+                }
 
-            let data = await response.json();
-            data.push({
-                login: "openai-chatgpt",
-                avatar_url:
-                    "https://avatars.githubusercontent.com/u/14957082?s=200&v=4",
-            });
-            data = data.filter((contributor) =>
-                ["dependabot[bot]", "openai-chatgpt","jonathan-martz"].includes(
-                    contributor.login,
-                ),
-            );
-            contributors.set(data); // Update the store
-        } catch (error) {
-            console.error("Failed to fetch contributors:", error);
+                let data = await response.json();
+                data.push({
+                    login: "openai-chatgpt",
+                    avatar_url:
+                        "https://avatars.githubusercontent.com/u/14957082?s=200&v=4",
+                });
+                data = data.filter((contributor) =>
+                    [
+                        "dependabot[bot]",
+                        "openai-chatgpt",
+                        "jonathan-martz",
+                    ].includes(contributor.login),
+                );
+                contributors.set(data); // Update the store
+                localStorage.setItem(
+                    "contributors",
+                    JSON.stringify(data),
+                );
+                localStorage.setItem(
+                    "contributors-date",
+                    new Date().toLocaleDateString(),
+                );
+            } catch (error) {
+                console.error("Failed to fetch contributors:", error);
+            }
+        } else {
+            contributors.set(JSON.parse(localStorage.getItem("contributors") ?? ''));
         }
     }
 

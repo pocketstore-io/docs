@@ -3,20 +3,39 @@
 
     let commits = [];
     let error = null;
+    let repo = "demo";
 
     onMount(async () => {
-        try {
-            const response = await fetch(
-                "https://api.github.com/repos/pocketstore-io/demo/commits?per_page=3", // Limit to 3 commits
-            );
-            if (!response.ok) {
-                throw new Error(
-                    `Error fetching commits: ${response.statusText}`,
+        if (
+            localStorage.getItem("commits-" + repo) === null &&
+            localStorage.getItem("commits-" + repo + "-date") !==
+                new Date().toLocaleDateString()
+        ) {
+            try {
+                const response = await fetch(
+                    "https://api.github.com/repos/pocketstore-io/" +
+                        repo +
+                        "/commits?per_page=3", // Limit to 3 commits
                 );
+                if (!response.ok) {
+                    throw new Error(
+                        `Error fetching commits: ${response.statusText}`,
+                    );
+                }
+                commits = await response.json();
+                localStorage.setItem(
+                    "commits-" + repo,
+                    JSON.stringify(commits),
+                );
+                localStorage.setItem(
+                    "commits-" + repo + "-date",
+                    new Date().toLocaleDateString(),
+                );
+            } catch (err) {
+                error = err.message;
             }
-            commits = await response.json();
-        } catch (err) {
-            error = err.message;
+        } else {
+            commits = JSON.parse(localStorage.getItem("commits-" + repo));
         }
     });
 </script>
