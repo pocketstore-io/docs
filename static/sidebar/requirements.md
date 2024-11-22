@@ -1,2 +1,6 @@
-- [Link Text](https://example.com)
-- [Link Text](https://example.com)
+# Navigation
+
+- [Requirements](/requirements)
+- [Getting Started](/getting-started)
+- [Cronjobs](/cronjobs)
+- 

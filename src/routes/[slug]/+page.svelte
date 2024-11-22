@@ -11,7 +11,7 @@
   let sidebar = "";
 
   let load = async function () {
-    const res = await fetch(`/sidebar/` + $page.params.slug + `.md`);
+    const res = await fetch(`/sidebar/requirements.md`);
     if (res.status === 200) {
       sidebar = await res.text();
     }
