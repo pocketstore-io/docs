@@ -8,9 +8,6 @@
 - nvm
 - snap
 - go
-- robo (only alpha version)
-- php (only alpha version)
-- composer (only alpha version)
 
 ## jq
 
@@ -48,25 +45,4 @@ apt-get install snapd
 
 ```bash
 snap install go --classic
-```
-
-## robo
-
-```bash
-wget https://robo.li/robo.phar && chmod +x robo.phar && sudo mv robo.phar /usr/bin/robo
-```
-
-## php
-
-```bash
-apt-get install php8.3-cli php8.3-curl
-```
-
-## composer
-
-```bash
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/local/bin/composer
 ```
