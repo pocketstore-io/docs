@@ -4,6 +4,7 @@
     import Fa from "svelte-fa";
     import {
         faCheckSquare,
+        faChevronLeft,
         faChevronRight,
         faEye,
     } from "@fortawesome/free-solid-svg-icons";
@@ -22,23 +23,32 @@
 <section class="page text-black px-3 py-3">
     <div class="mx-auto max-w-6xl">
         <div class="grid grid-cols-6 gap-x-6">
-            <div class="col-span-6 md:col-span-3 text-center py-24 px-6">
+            <div class="col-span-6 md:col-span-3 text-center py-12 px-6">
+                <section class="notes mb-6">
+                    <div class="alert alert-warning text-red-600 font-bold text-sm text-center block">
+                        This Project is still in Development, Fragile and not
+                        for Production.
+                    </div>
+                </section>
                 <img src="/pocketstore-logo-white.svg" alt="" />
                 <p class="mb-5 mt-5 text-white">
                     Welcome to your Documentation of PocketStore.
                     <br />
                     Your Store out of your Pocket
                 </p>
-                <section class="action join">
-                    <button
-                        class="px-3 py-3 join-item rounded-none flex items-center"
-                    >
-                        <Fa icon={faEye} size="2x" color="white" class="mr-3" />
+                <section class="actions mb-3">
+                    <button class="px-3 py-3 btn btn-secondary">
+                        <Fa icon={faEye} size="2x" color="white" />
+                        <Fa icon={faChevronLeft} size="1x" color="white" />
                         <span class="text-[#b8dbe4] hover:font-bold"
                             >Watch our Demo</span
                         >
                     </button>
-                    <button class="px-3 py-3 join-item rounded-none flex">
+                    <a
+                        target="_blank"
+                        href="https://github.com/pocketstore-io/demo"
+                        class="px-3 py-3 btn btn-primary"
+                    >
                         <span>Take a look at the Code</span>
                         <Fa icon={faChevronRight} size="1x" color="white" />
                         <Fa
@@ -47,32 +57,10 @@
                             color="white"
                             class="ml-2"
                         />
-                    </button>
-                </section>
-                <section class="badges space-y-3">
-                    <div class="badge badge-neutral text-black badge-lg">
-                        <Fa icon={faCheckSquare} color="black" class="mr-2" />
-                        <span>Checkout with PayPal</span>
-                    </div>
-                    <div class="badge badge-neutral text-black badge-lg">
-                        <Fa icon={faCheckSquare} color="black" class="mr-2" />
-                        <span>Checkout with Klarna</span>
-                    </div>
-                    <div class="badge badge-neutral text-black badge-lg">
-                        <Fa icon={faCheckSquare} color="black" class="mr-2" />
-                        <span>Checkout with Stripe</span>
-                    </div>
-                    <div class="badge badge-neutral text-black badge-lg">
-                        <Fa icon={faCheckSquare} color="black" class="mr-2" />
-                        <span>Easy to Setup</span>
-                    </div>
-                    <div class="badge badge-neutral text-black badge-lg">
-                        <Fa icon={faCheckSquare} color="black" class="mr-2" />
-                        <span>Based on PocketBase</span>
-                    </div>
+                    </a>
                 </section>
             </div>
-            <div class="col-span-6 md:col-span-3">
+            <div class="col-span-6 md:col-span-3 mb-3">
                 <div class="w-full pt-24 pb-6">
                     <Status />
                     <div
@@ -131,6 +119,7 @@
                 <PocketbasePhpSdk />
             </div>
             <div class="col-span-6 md:col-span-3 text-[#b8dbe4]">
+                <div class="divider divider-primary">Releases</div>
                 <p class="text-sm"></p>
                 <Releases></Releases>
                 <Commits></Commits>
