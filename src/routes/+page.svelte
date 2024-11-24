@@ -107,9 +107,9 @@
                                 class="text-[#1f6fed]"
                                 onclick={() => {
                                     copyToClipboard(
-                                        "cd demo && chmod u+x ./bin/init.sh",
+                                        "cd demo && chmod u+x ./bin/init.go",
                                     );
-                                }}>cd demo && chmod u+x ./bin/init.sh</button
+                                }}>cd demo && chmod u+x ./bin/init.go</button
                             >
                         </div>
                         <div class="mt-3 flex">
@@ -117,8 +117,8 @@
                             <button
                                 class="text-[#1f6fed]"
                                 onclick={() => {
-                                    copyToClipboard("./bin/init.sh");
-                                }}>./bin/init.sh</button
+                                    copyToClipboard("go run ./bin/init.go");
+                                }}>go run ./bin/init.go</button
                             >
                         </div>
                     </div>
