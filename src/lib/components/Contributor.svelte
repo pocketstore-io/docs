@@ -72,7 +72,7 @@
     <div class="grid grid-cols-12 gap-3">
         <!-- Subscribe to the store -->
         {#each $contributors as contributor}
-            <div class="col-span-16 md:col-span-2">
+            <div class="col-span-6 md:col-span-2">
                 <img src={contributor.avatar_url} alt={contributor.login} />
             </div>
         {/each}
