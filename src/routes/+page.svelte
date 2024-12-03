@@ -3,7 +3,6 @@
     import Contributor from "./../lib/components/Contributor.svelte";
     import Fa from "svelte-fa";
     import {
-        faCheckSquare,
         faChevronLeft,
         faChevronRight,
         faEye,
@@ -94,19 +93,8 @@
                             <button
                                 class="text-[#1f6fed]"
                                 onclick={() => {
-                                    copyToClipboard(
-                                        "cd demo && chmod u+x ./bin/init.go",
-                                    );
-                                }}>cd demo && chmod u+x ./bin/init.go</button
-                            >
-                        </div>
-                        <div class="mt-3 flex">
-                            <span class="text-black mr-3">bash:~$</span>
-                            <button
-                                class="text-[#1f6fed]"
-                                onclick={() => {
-                                    copyToClipboard("go run ./bin/init.go");
-                                }}>go run ./bin/init.go</button
+                                    copyToClipboard("cd demo && go run ./bin/init.go");
+                                }}>cd demo && go run ./bin/init.go</button
                             >
                         </div>
                     </div>

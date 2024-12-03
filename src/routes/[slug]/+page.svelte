@@ -2,13 +2,12 @@
   import SvelteMarkdown from "svelte-markdown";
   import { page } from "$app/stores";
   import { afterUpdate, onMount } from "svelte";
+  let md = "";
+  let sidebar = "";
 
   afterUpdate(() => {
     load();
   });
-
-  let md = "";
-  let sidebar = "";
 
   let load = async function () {
     const res = await fetch(`/sidebar/requirements.md`);

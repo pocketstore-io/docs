@@ -2,18 +2,11 @@
 
 **Requirements:** (Iam using Ubuntu 24.04)
 
-- jq
 - bun
 - pm2
 - nvm
 - snap
 - go
-
-## jq
-
-```bash
-apt-get install jq
-```
 
 ## NVM (Node & npm)
 
