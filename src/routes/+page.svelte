@@ -24,12 +24,26 @@
         <div class="grid grid-cols-6 gap-x-6">
             <div class="col-span-6 md:col-span-3 text-center py-12 px-6">
                 <section class="notes mb-6">
-                    <div class="alert alert-warning text-red-600 font-bold text-sm text-center block">
+                    <div
+                        class="alert alert-warning text-red-600 font-bold text-sm text-center block"
+                    >
                         This Project is still in Development, Fragile and not
                         for Production.
                     </div>
                 </section>
                 <img src="/pocketstore-logo-white.svg" alt="" />
+                <section class="forks my-3 space-x-3 flex justify-center">
+                    <img
+                        class=""
+                        alt="GitHub forks"
+                        src="https://img.shields.io/github/forks/pocketstore-io/demo"
+                    />
+                    <img
+                        class=""
+                        src="https://img.shields.io/github/stars/pocketstore-io/demo"
+                        alt=""
+                    />
+                </section>
                 <p class="mb-5 mt-5 text-white">
                     Welcome to your Documentation of PocketStore.
                     <br />
@@ -93,13 +107,28 @@
                             <button
                                 class="text-[#1f6fed]"
                                 onclick={() => {
-                                    copyToClipboard("cd demo && go run ./bin/init.go");
+                                    copyToClipboard(
+                                        "cd demo && go run ./bin/init.go",
+                                    );
                                 }}>cd demo && go run ./bin/init.go</button
                             >
                         </div>
                     </div>
                 </div>
                 <Contributor></Contributor>
+            </div>
+            <div class="col-span-6 hidden">
+                <section class="grid grid-cols-6 gap-3">
+                    <div class="col-span-6 md:col-span-2">
+                        <img src="http://localhost:5173/demos/ikea.pocketstore.io.png" alt="">
+                    </div>
+                    <div class="col-span-6 md:col-span-2">
+                        <img src="http://localhost:5173/demos/ikea.pocketstore.io.png" alt="">
+                    </div>
+                    <div class="col-span-6 md:col-span-2">
+                        <img src="http://localhost:5173/demos/ikea.pocketstore.io.png" alt="">
+                    </div>
+                </section>
             </div>
             <div class="col-span-6 md:col-span-3">
                 <History></History>
