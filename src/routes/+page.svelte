@@ -117,16 +117,16 @@
                 </div>
                 <Contributor></Contributor>
             </div>
-            <div class="col-span-6 hidden">
+            <div class="col-span-6">
                 <section class="grid grid-cols-6 gap-3">
                     <div class="col-span-6 md:col-span-2">
-                        <img src="http://localhost:5173/demos/ikea.pocketstore.io.png" alt="">
+                        <img src="/demos/gummersbach-imbiss.png" alt="">
                     </div>
                     <div class="col-span-6 md:col-span-2">
-                        <img src="http://localhost:5173/demos/ikea.pocketstore.io.png" alt="">
+                        <img src="/demos/ikea.pocketstore.io.png" alt="">
                     </div>
                     <div class="col-span-6 md:col-span-2">
-                        <img src="http://localhost:5173/demos/ikea.pocketstore.io.png" alt="">
+                        <img src="/demos/gummersbach-biker.png" alt="">
                     </div>
                 </section>
             </div>
