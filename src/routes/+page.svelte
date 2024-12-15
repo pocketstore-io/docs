@@ -140,7 +140,7 @@
                     </div>
                     <div class="col-span-6 md:col-span-2">
                         <a
-                            href="https://ikea.pockstore.io"
+                            href="https://ikea.pocketstore.io"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
