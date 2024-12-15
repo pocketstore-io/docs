@@ -117,8 +117,9 @@
                 </div>
                 <Contributor></Contributor>
             </div>
-            <div class="col-span-6">
+            <div class="col-span-6 mb-6">
                 <section class="grid grid-cols-6 gap-3">
+                    <div class="col-span-6"><div class="divider divider-primary text-lg font-bold text-white">Demos mit PockeStore</div></div>
                     <div class="col-span-6 md:col-span-2">
                         <img src="/demos/gummersbach-imbiss.png" alt="">
                     </div>
