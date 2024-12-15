@@ -119,15 +119,42 @@
             </div>
             <div class="col-span-6 mb-6">
                 <section class="grid grid-cols-6 gap-3">
-                    <div class="col-span-6"><div class="divider divider-primary text-lg font-bold text-white">Demos mit PockeStore</div></div>
-                    <div class="col-span-6 md:col-span-2">
-                        <img src="/demos/gummersbach-imbiss.png" alt="">
+                    <div class="col-span-6">
+                        <div
+                            class="divider divider-primary text-lg font-bold text-white"
+                        >
+                            Demos mit PockeStore
+                        </div>
                     </div>
                     <div class="col-span-6 md:col-span-2">
-                        <img src="/demos/ikea.pocketstore.io.png" alt="">
+                        <a
+                            href="https://www.gummersbach-imbiss.de"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="/demos/gummersbach-imbiss.png"
+                                alt=""
+                            /></a
+                        >
                     </div>
                     <div class="col-span-6 md:col-span-2">
-                        <img src="/demos/gummersbach-biker.png" alt="">
+                        <a
+                            href="https://ikea.pockstore.io"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="/demos/ikea.pocketstore.io.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="col-span-6 md:col-span-2">
+                        <a
+                            href="https://www.gummersbach-biker.shop"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="/demos/gummersbach-biker.png" alt="" /></a
+                        >
                     </div>
                 </section>
             </div>
