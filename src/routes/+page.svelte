@@ -50,13 +50,13 @@
                     Your Store out of your Pocket
                 </p>
                 <section class="actions mb-3">
-                    <button class="px-3 py-3 btn btn-secondary">
+                    <a href="https://demo.pocketstore.io" class="px-3 py-3 btn btn-secondary">
                         <Fa icon={faEye} size="2x" color="white" />
                         <Fa icon={faChevronLeft} size="1x" color="white" />
                         <span class="text-[#b8dbe4] hover:font-bold"
                             >Watch our Demo</span
                         >
-                    </button>
+                    </a>
                     <a
                         target="_blank"
                         href="https://github.com/pocketstore-io/demo"
