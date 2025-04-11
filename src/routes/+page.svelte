@@ -49,7 +49,7 @@
                     <br />
                     Your Store out of your Pocket
                 </p>
-                <section class="actions mb-3">
+                <section class="actions flex space-x-6">
                     <a href="https://demo.pocketstore.io" class="px-3 py-3 btn btn-secondary">
                         <Fa icon={faEye} size="2x" color="white" />
                         <Fa icon={faChevronLeft} size="1x" color="white" />
@@ -108,9 +108,9 @@
                                 class="text-[#1f6fed]"
                                 onclick={() => {
                                     copyToClipboard(
-                                        "cd demo && go run ./bin/init.go",
+                                        "cd demo && docker compose up",
                                     );
-                                }}>cd demo && go run ./bin/init.go</button
+                                }}>cd demo && docker compose up</button
                             >
                         </div>
                     </div>
