@@ -9,7 +9,7 @@
 
         <span class="flex-1">
             <span class="text-black"> composer require </span>
-            <span class="text-yellow-600">
+            <span class="text-[#1EADEF] text-sm">
                 jonathan-martz/pocketbase-php-sdk
             </span>
         </span>

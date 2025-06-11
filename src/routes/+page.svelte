@@ -31,7 +31,7 @@
                         for Production.
                     </div>
                 </section>
-                <img src="/pocketstore-logo-white.svg" alt="" />
+                <img src="/pocketstore-logo-white.svg" alt="" class="my-9" />
                 <section class="forks my-3 space-x-3 flex justify-center">
                     <img
                         class=""
@@ -74,7 +74,7 @@
                 </section>
             </div>
             <div class="col-span-6 md:col-span-3 mb-3">
-                <div class="w-full pt-24 pb-6">
+                <div class="w-full pt-16 pb-6">
                     <Status />
                     <div
                         class="coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased
@@ -133,7 +133,7 @@
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="/demos/gummersbach-imbiss.png"
+                                src="https://place-hold.it/1920x1080"
                                 alt=""
                             /></a
                         >
@@ -144,7 +144,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src="/demos/ikea.pocketstore.io.png" alt="" />
+                            <img src="https://place-hold.it/1920x1080" alt="" />
                         </a>
                     </div>
                     <div class="col-span-6 md:col-span-2">
@@ -153,7 +153,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src="/demos/gummersbach-biker.png" alt="" /></a
+                            <img src="https://place-hold.it/1920x1080" alt="" /></a
                         >
                     </div>
                 </section>
